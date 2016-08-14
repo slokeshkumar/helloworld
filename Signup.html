@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Page</title>
+</head>
+<style>
+body
+{
+background-image:url(future_megapolis_flying_car-1280x720.jpg);
+}
+h1{
+text-align:center;
+color: LightYellow;
+font-size:30px;
+}
+h2
+{
+text-align:center;
+color:LightYellow;
+font-size:37px;
+}
+p{
+font-size:20px;
+color:LightYellow;
+}
+</style>
+<script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("txtPassword").value;
+        var confirmPassword = document.getElementById("txtConfirmPassword").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == null||x ==" ") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
+<body>
+<h2>Welcome to the Registration page</h2>
+<form name="myForm" action="file:///C:/Users/userr/Desktop/LoginPage.html"
+onsubmit="return Validate()" method="post">
+<table>
+<tr>
+<td><p>First_Name:</p></td>
+<td><input type="text"  name="fname" required="required" placeholder="First Name"></td>
+</tr>
+<tr>
+<td><p>Last_Name:</p></td>
+<td><input type="text"   name="lname" required="required" placeholder="Last Name"></td>
+</tr>
+<tr>
+<td><p>Email_Id:</p></td>
+<td><input type="text" name="signup" id="signup" required="required" pattern="[a-zA-z0-9]{3,}@[a-zA-Z]{3,}.{1,}[a-zA-Z]{2,}"</td>
+</tr>
+<tr>
+<td><p>Create Your Password</p></td>
+<td><input type="password"  name="password"  id="txtPassword" required="required"></td>
+</tr>
+<tr>
+<td><p>Confirm your Password</p></td>
+<td><input type="password"  name="password"   id="txtConfirmPassword" required="required"></td>
+</tr>
+<tr>
+<td><p>Number:</p></td>
+<td><input type="text"  name="number" pattern="[0-9]{10}"  required="required"></td>
+</tr>
+<tr>
+<td><p><label>Gender:</label></td>
+         <td><select name="Gender">
+         <option value="male">Male</option>
+         <option value="female">Female</option>
+         </select></td>
+</tr>
+</table>
+<br>
+<style="padding-top:550px"><input type="submit" value="Sign Up">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="Reset" value="Reset">
+
+</form>
+</body>
+</html>
